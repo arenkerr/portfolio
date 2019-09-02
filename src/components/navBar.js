@@ -7,7 +7,7 @@ import { Navbar, Nav } from "react-bootstrap"
 const CustomNavbar = ({ siteTitle, pageInfo }) => {
   return (
     <>
-      <Navbar variant="dark" expand="lg" id="site-navbar">
+      <Navbar variant="dark" expand="lg" id="site-navbar" className="shadow-sm">
         {/* <Container> */}
         <Link to="/" className="link-no-style">
           <Navbar.Brand as="span">
@@ -15,25 +15,24 @@ const CustomNavbar = ({ siteTitle, pageInfo }) => {
             <Link
               to="/"
               style={{
-                color: `white`,
                 textDecoration: `none`,
               }}
             >
-              {siteTitle}
+              AK
             </Link>
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto" activeKey={pageInfo && pageInfo.pageName}>
-            <Link to="/page-2" className="link-no-style">
-              <Nav.Link as="span" eventKey="page-2">
-                Page 2
+            <Link to="#about" className="nav-links">
+              <Nav.Link as="span" eventKey="about">
+                About
               </Nav.Link>
             </Link>
-            <Link to="/page-2" className="link-no-style">
-              <Nav.Link as="span" eventKey="page-2">
-                Page 2
+            <Link to="#projects" className="nav-links">
+              <Nav.Link as="span" eventKey="projects">
+                Projects
               </Nav.Link>
             </Link>
           </Nav>
