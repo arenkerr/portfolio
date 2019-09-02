@@ -16,6 +16,46 @@ div.full-height {
   min-height: 100vh;
 }
 
+#section {
+  margin: 0 auto;
+  max-width: 960;
+  padding: 0px 1.0875rem 1.45rem;
+  padding-top: 40;
+}
+
+#section-header {
+  max-width: 100%;
+  padding: 40px 0 40px 0;
+  color: #7859ed;
+}
+
+#about {
+  min-height: 100vh;
+  background-color: #50c9bb;
+  align-items: center;
+  display: flex;
+  padding: 2em;
+}
+
+#projects {
+  background-color: #ffdcc8;
+  color: #1d3461;
+}
+
+#about-text {
+  font-size: 1.3em;
+  color: #fff;
+}
+
+#skills {
+  background-color: #3eaea1;
+  align-items: center;
+  display: flex;
+  font-size: 1.3em;
+  color: #fff;
+  padding: 2em;
+}
+
 img {
   max-width: 100%;
   margin-left: 0;
@@ -26,6 +66,10 @@ img {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 a.link-no-style {
