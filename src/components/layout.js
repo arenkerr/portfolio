@@ -10,6 +10,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import { Container, Row, Col } from "react-bootstrap"
+import { FiGithub } from "react-icons/fi"
+import { IconContext } from "react-icons"
 
 import Header from "./header"
 import Navbar from "./navBar"
@@ -31,11 +33,19 @@ const Layout = ({ children, pageInfo }) => {
       <Navbar siteTitle={data.site.siteMetadata.title} pageInfo={pageInfo} />
 
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+
+      <div id="footer">
+        <Container>
+          <footer>
+            © {new Date().getFullYear()}, Alana Kerr |{" "}
+            <a href="https://github.com/anikerr/portfolio" target="_blank">
+              <IconContext.Provider value={{ className: "footer-icon" }}>
+                <FiGithub />
+              </IconContext.Provider>
+            </a>
+          </footer>
+        </Container>
+      </div>
     </>
   )
 }

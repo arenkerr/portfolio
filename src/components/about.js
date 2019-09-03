@@ -1,6 +1,8 @@
 import React from "react"
 import { Row, Col, Container, ListGroup } from "react-bootstrap"
+
 import { FiMail, FiGithub, FiLinkedin } from "react-icons/fi"
+import { IconContext } from "react-icons"
 
 import { meBw } from "../images"
 
@@ -25,7 +27,17 @@ const About = props => {
                 leap into tech. Nothing gets me more excited than building,
                 creating, and learning new technologies.
               </p>
-              <FiMail /> <FiGithub /> <FiLinkedin />
+              <IconContext.Provider value={{ className: "about-icon" }}>
+                <a href="mailto:ani.kerr@gmail.com">
+                  <FiMail />
+                </a>
+                <a href="https://github.com/anikerr">
+                  <FiGithub />
+                </a>
+                <a href="https://www.linkedin.com/in/alana-kerr/">
+                  <FiLinkedin />
+                </a>
+              </IconContext.Provider>
             </Col>
           </Row>
         </Container>

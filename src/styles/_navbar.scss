@@ -10,12 +10,15 @@
   color: #50c9bb;
   font-size: 1.2em;
   font-weight: 700;
+  border: 0.12em solid #ffdcc8;
+  padding: 0.2em 0.3em 0.2em 0.3em;
+  border-radius: 0.2em;
 }
 
 .nav-link.active:after {
   content: "";
   float: left;
-  background: #f693aa;
+  background: #f68c50;
   width: 100%;
   height: 4px;
   border-radius: 3px;

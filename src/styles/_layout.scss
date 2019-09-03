@@ -16,30 +16,48 @@ div.full-height {
   min-height: 100vh;
 }
 
+.row {
+  align-items: center;
+}
+
 #section {
   margin: 0 auto;
-  max-width: 960;
-  padding: 0px 1.0875rem 1.45rem;
-  padding-top: 40;
+  padding-top: 4em;
 }
 
 #section-header {
   max-width: 100%;
-  padding: 40px 0 40px 0;
-  color: #7859ed;
+  padding: 2.5em 0 2.5em 0;
+  background-color: #e88248;
+  color: #ffdcc8;
 }
 
 #about {
   min-height: 100vh;
-  background-color: #50c9bb;
+  background-color: #47b5a8;
   align-items: center;
   display: flex;
-  padding: 2em;
+  padding: 2.5em;
+}
+
+.about-icon {
+  color: #ffe4de;
+  font-size: 1.8em;
+  padding-right: 0.3em;
 }
 
 #projects {
-  background-color: #ffdcc8;
+  background-color: #ffe4de;
   color: #1d3461;
+}
+
+.project-icon {
+  color: #1d3461;
+  font-size: 1.3em;
+}
+
+#project-about {
+  padding-top: 1em;
 }
 
 #about-text {
@@ -48,12 +66,12 @@ div.full-height {
 }
 
 #skills {
-  background-color: #3eaea1;
+  background-color: #33a093;
   align-items: center;
   display: flex;
   font-size: 1.3em;
   color: #fff;
-  padding: 2em;
+  padding: 2.5em;
 }
 
 img {
@@ -68,8 +86,15 @@ img {
   margin-bottom: 1.45rem;
 }
 
+a {
+  color: #1d3461;
+  text-decoration: none;
+  font-weight: 700;
+}
+
 a:hover {
   text-decoration: none;
+  color: #1d3461;
 }
 
 a.link-no-style {
@@ -78,26 +103,35 @@ a.link-no-style {
   }
 }
 
-.footer-col {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  footer {
-    display: flex;
-    position: relative;
-    bottom: 0;
-    margin-top: -60px;
-    height: 60px;
-    clear: both;
-    background-color: $color-primary;
-    color: white;
-    justify-content: center;
-    width: 100%;
+h1 {
+  color: #ffe4de;
+}
 
-    span {
-      align-self: center;
-      text-align: center;
-    }
-  }
+h2 {
+  padding-bottom: 1em;
+}
+
+ul {
+  list-style: none;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
+li {
+  display: inline;
+  font-weight: 700;
+}
+
+#footer {
+  background-color: #1d3461;
+}
+
+footer {
+  text-align: center;
+  padding: 2.5em;
+  color: #ffdcc8;
+}
+
+.footer-icon {
+  color: #ffdcc8;
 }

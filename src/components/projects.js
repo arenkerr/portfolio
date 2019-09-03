@@ -1,28 +1,40 @@
 import React from "react"
 
 import { Row, Col, Container, ListGroup } from "react-bootstrap"
+import { FiGithub } from "react-icons/fi"
+import { IconContext } from "react-icons"
 
-import { placeholder } from "../images"
+import { birdSpot, aMazeThing } from "../images"
 
 const Project = props => {
   const stack = props.stack
 
   return (
     <div id="projects">
-      <Container id="section-header">
-        <h1>Projects</h1>
-      </Container>
       <Container>
         <Row id="section">
-          <h2>{props.projectTitle}</h2>
-          <img src={props.projectImg} alt={props.projectTitle} />
-          <a href={props.github}>View on github</a>
-          <p>{props.about}</p>
-          <ul>
-            {stack.map((item, index) => {
-              return <li key={index}>{item}</li>
-            })}
-          </ul>
+          <Col>
+            <img src={props.projectImg} alt={props.projectTitle} />
+          </Col>
+          <Col>
+            <h2>{props.projectTitle}</h2>
+
+            <a href={props.github}>
+              <IconContext.Provider value={{ className: "project-icon" }}>
+                <FiGithub /> View on Github
+              </IconContext.Provider>
+            </a>
+            <p id="project-about">{props.about}</p>
+            <ul>
+              {stack.map((item, index) => {
+                return index !== stack.length - 1 ? (
+                  <li key={index}>{item} | </li>
+                ) : (
+                  <li key={index}>{item}</li>
+                )
+              })}
+            </ul>
+          </Col>
         </Row>
       </Container>
     </div>
@@ -31,20 +43,25 @@ const Project = props => {
 
 export default () => {
   return (
-    <div>
-      <Project
-        projectTitle="BirdSpot"
-        projectImg={placeholder}
-        github="https://github.com/anikerr/bird-spot"
-        stack={[
-          "Node.js",
-          "React Native",
-          "Expo",
-          "Cloud Firestore",
-          "Google Maps Platform",
-        ]}
-        about="BirdSpot is a bird watching ios application. Users can share photos and details of bird sightings and find bird sightings in their area."
-      />
-    </div>
+    <>
+      <div>
+        <Project
+          projectTitle="BirdSpot"
+          projectImg={birdSpot}
+          github="https://github.com/anikerr/bird-spot"
+          stack={["React Native", "Cloud Firestore", "Google Maps API"]}
+          about="BirdSpot is a bird watching ios application. It was a Fullstack Stackathon winner for best design and built in just 4 days. Users can share photos and details of bird sightings and see what birds species have been spotted in their area."
+        />
+      </div>
+      <div>
+        <Project
+          projectTitle="A Maze Thing"
+          projectImg={aMazeThing}
+          github="https://github.com/kirby-s-keystones/A-Maze-Thing"
+          stack={["React Native", "Viro"]}
+          about="In this cross-platform AR app, players navigate a maze to collect coins in a race against time. Players can also build their own maze to challenge friends and search for user-built mazes."
+        />
+      </div>
+    </>
   )
 }
