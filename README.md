@@ -32,7 +32,7 @@ The site will run on `http://localhost:8000`
 gatsby build
 ```
 
-This site was deployed with Netlify: https://www.alana-kerr.com.
+This site was deployed with Netlify: http://www.alana-kerr.com.
 
 ## Built With
 
