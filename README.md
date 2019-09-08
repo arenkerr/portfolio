@@ -32,6 +32,8 @@ The site will run on `http://localhost:8000`
 gatsby build
 ```
 
+This site was deployed with Netlify: http://alana-kerr.com.
+
 ## Built With
 
 - [Gatsby](http://www.gatsbyjs.org) - Web framework based on React
