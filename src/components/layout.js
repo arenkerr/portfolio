@@ -9,11 +9,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { Container, Row, Col } from "react-bootstrap"
+import { Container } from "react-bootstrap"
 import { FiGithub } from "react-icons/fi"
 import { IconContext } from "react-icons"
 
-import Header from "./header"
 import Navbar from "./navBar"
 
 const Layout = ({ children, pageInfo }) => {
@@ -29,7 +28,6 @@ const Layout = ({ children, pageInfo }) => {
 
   return (
     <>
-      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
       <Navbar siteTitle={data.site.siteMetadata.title} pageInfo={pageInfo} />
 
       <main>{children}</main>
@@ -38,7 +36,11 @@ const Layout = ({ children, pageInfo }) => {
         <Container>
           <footer>
             © {new Date().getFullYear()}, Alana Kerr |{" "}
-            <a href="https://github.com/anikerr/portfolio" target="_blank">
+            <a
+              href="https://github.com/anikerr/portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <IconContext.Provider value={{ className: "footer-icon" }}>
                 <FiGithub />
               </IconContext.Provider>

@@ -1,5 +1,5 @@
 import React from "react"
-import { Row, Col, Container, ListGroup } from "react-bootstrap"
+import { Row, Col, Container } from "react-bootstrap"
 
 import { FiMail, FiGithub, FiLinkedin } from "react-icons/fi"
 import { IconContext } from "react-icons"
@@ -7,8 +7,6 @@ import { IconContext } from "react-icons"
 import { meBw } from "../images"
 
 const About = props => {
-  const stack = props.stack
-
   return (
     <>
       <div id="about">
@@ -22,7 +20,11 @@ const About = props => {
               <p>
                 I'm Alana Kerr, or Åni for short. I'm a fullstack developer with
                 a desire to use tech for good. I was born on the island of Guam
-                🌴and have a background in design and illustration. After
+                &nbsp;
+                <span role="img" aria-label="palm_tree">
+                  🌴
+                </span>
+                &nbsp; and have a background in design and illustration. After
                 working as a graphic designer in NYC for 5 years, I made the
                 leap into tech. Nothing gets me more excited than building,
                 creating, and learning new technologies.

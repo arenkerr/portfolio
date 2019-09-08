@@ -37,7 +37,7 @@ div.full-height {
   background-color: #47b5a8;
   align-items: center;
   display: flex;
-  padding: 2.5em;
+  padding: 0 2.5em 2.5em 2.5em;
 }
 
 .about-icon {
@@ -49,6 +49,7 @@ div.full-height {
 #projects {
   background-color: #ffe4de;
   color: #1d3461;
+  padding-bottom: 1em;
 }
 
 .project-icon {
