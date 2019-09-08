@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Row, Col, Container, ListGroup } from "react-bootstrap"
+import { Row, Col, Container } from "react-bootstrap"
 import { FiGithub } from "react-icons/fi"
 import { IconContext } from "react-icons"
 
@@ -13,10 +13,10 @@ const Project = props => {
     <div id="projects">
       <Container>
         <Row id="section">
-          <Col>
+          <Col sm={8}>
             <img src={props.projectImg} alt={props.projectTitle} />
           </Col>
-          <Col>
+          <Col sm={4}>
             <h2>{props.projectTitle}</h2>
 
             <a href={props.github}>
