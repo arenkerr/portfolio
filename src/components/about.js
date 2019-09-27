@@ -46,12 +46,10 @@ const About = props => {
       </div>
       <div id="skills">
         <Container>
-          <p>
-            <h3>Skills</h3>
-            JavaScript · React · React Native · Redux · Node.js · Express ·
-            PostgreSQL · HTML5 · CSS · Bootstrap · Firebase · Travis · Heroku ·
-            Passport/OAuth
-          </p>
+          <h3>Skills</h3>
+          JavaScript · React · React Native · Redux · Node.js · Express ·
+          PostgreSQL · HTML5 · CSS · Bootstrap · Firebase · Travis · Heroku ·
+          Passport/OAuth
         </Container>
       </div>
     </>

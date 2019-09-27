@@ -25,7 +25,10 @@ const Layout = ({ children, pageInfo }) => {
       }
     }
   `)
-
+  if (typeof window !== "undefined") {
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]')
+  }
   return (
     <>
       <Navbar siteTitle={data.site.siteMetadata.title} pageInfo={pageInfo} />
