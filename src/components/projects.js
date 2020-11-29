@@ -26,7 +26,7 @@ const Project = props => {
               <span>
                 &nbsp;|
                 <a href={props.demo}>
-                &nbsp;Demo
+                  &nbsp;Demo
                 </a>
               </span>
             }
@@ -73,7 +73,7 @@ export default () => {
           projectImg={meTrees}
           github="https://github.com/anikerr/middle-earth-d3"
           stack={["React", "D3", "GraphQL"]}
-          about="Genealogical data from Tolkien's Middle-Earth rendered into interactive visualizations using React and D3"
+          about="Genealogical data from Tolkien's Middle-Earth rendered into interactive visualizations using React and D3."
           demo="https://middle-earth-trees.netlify.app/"
         />
       </div>
