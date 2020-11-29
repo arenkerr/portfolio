@@ -1,7 +1,7 @@
 import React from "react"
 import { Row, Col, Container } from "react-bootstrap"
 
-import { FiMail, FiGithub, FiLinkedin } from "react-icons/fi"
+import { FiMail, FiGithub, FiLinkedin, FiInstagram } from "react-icons/fi"
 import { IconContext } from "react-icons"
 
 import { meBw } from "../images"
@@ -33,11 +33,17 @@ const About = props => {
                 <a href="mailto:ani.kerr@gmail.com">
                   <FiMail />
                 </a>
-                <a href="https://github.com/anikerr">
+                <a href="https://github.com/anikerr"
+                   target="_blank">
                   <FiGithub />
                 </a>
-                <a href="https://www.linkedin.com/in/alana-kerr/">
+                <a href="https://www.linkedin.com/in/alana-kerr/"
+                   target="_blank">
                   <FiLinkedin />
+                </a>
+                <a href="https://www.instagram.com/ani_kerr/"
+                   target="_blank">
+                  <FiInstagram />
                 </a>
               </IconContext.Provider>
             </Col>
@@ -47,9 +53,8 @@ const About = props => {
       <div id="skills">
         <Container>
           <h3>Skills</h3>
-          JavaScript · React · React Native · Redux · Node.js · Express ·
-          PostgreSQL · HTML5 · CSS · Bootstrap · Firebase · Travis · Heroku ·
-          Passport/OAuth
+          JavaScript · React · Angular · React Native · Redux · Node.js · Express ·
+          Typescript · SCSS · Heroku · MongoDB · Git
         </Container>
       </div>
     </>
