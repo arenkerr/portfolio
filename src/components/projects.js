@@ -1,48 +1,49 @@
 import React from "react"
-
 import { Row, Col, Container } from "react-bootstrap"
-import { FiGithub } from "react-icons/fi"
-import { IconContext } from "react-icons"
 
 import { birdSpot, aMazeThing, meTrees } from "../images"
+import Icon from "./icon"
 
 const Project = props => {
   const stack = props.stack
 
   return (
-      <Container className="project">
-        <Row id="section">
-          <Col sm={8}>
-            <img src={props.projectImg} alt={props.projectTitle} />
-          </Col>
-          <Col sm={4}>
-            <h2>{props.projectTitle}</h2>
-            <a href={props.github}>
-              <IconContext.Provider value={{ className: "project-icon" }}>
-                <FiGithub /> View on Github
-              </IconContext.Provider>
-            </a>
-            {props.demo &&
-              <span>
-                &nbsp;|
-                <a href={props.demo}>
-                  &nbsp;Demo
-                </a>
-              </span>
-            }
-            <p id="project-about">{props.about}</p>
-            <ul>
-              {stack.map((item, index) => {
-                return index !== stack.length - 1 ? (
-                  <li key={index}>{item} | </li>
-                ) : (
-                  <li key={index}>{item}</li>
-                )
-              })}
-            </ul>
-          </Col>
-        </Row>
-      </Container>
+    <Container className="project">
+      <Row className="section">
+        <Col sm={8}>
+          <img src={props.projectImg} alt={props.projectTitle} />
+        </Col>
+        <Col sm={4}>
+          <h2>{props.projectTitle}</h2>
+          <Icon
+            name="github"
+            url={props.github}
+            iconClass="project-icon"
+            linkText="View on Github"
+          />
+          {props.demo && (
+            <span>
+              &nbsp;<span aria-hidden="true">|&nbsp;</span>
+              <a href={props.demo} className="icon-link-text">
+                Demo
+              </a>
+            </span>
+          )}
+          <p className="project-about">{props.about}</p>
+          <ul>
+            {stack.map((item, index) => {
+              return index !== stack.length - 1 ? (
+                <li key={index}>
+                  {item} <span aria-hidden="true">|</span>{" "}
+                </li>
+              ) : (
+                <li key={index}>{item}</li>
+              )
+            })}
+          </ul>
+        </Col>
+      </Row>
+    </Container>
   )
 }
 

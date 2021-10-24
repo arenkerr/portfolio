@@ -1,6 +1,6 @@
 # Portfolio
 
-Simple portfolio site built with Gatsby and Bootstrap. Includes a responsive navigation menu and React icons.
+Simple portfolio site built with Gatsby and Bootstrap. Complies with accessibility guidelines (WCAG 2.1.
 
 ### Prerequisites
 
@@ -32,7 +32,7 @@ The site will run on `http://localhost:8000`
 gatsby build
 ```
 
-This site was deployed with Netlify: http://alana-kerr.com.
+This site was deployed with Netlify: http://www.anikerr.com.
 
 ## Built With
 

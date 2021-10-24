@@ -1,26 +1,46 @@
 import React from "react"
 import { Row, Col, Container } from "react-bootstrap"
 
-import { FiMail, FiGithub, FiLinkedin, FiInstagram } from "react-icons/fi"
-import { IconContext } from "react-icons"
-
 import { meBw } from "../images"
+import Icon from "./icon"
 
 const About = props => {
+  const icons = [
+    {
+      name: "mail",
+      url: "mailto:ani.kerr@gmail.com",
+      label: "Email ani.kerr@gmail.com",
+    },
+    {
+      name: "github",
+      url: "https://github.com/anikerr",
+      label: "Visit my GitHub profile",
+    },
+    {
+      name: "linkedIn",
+      url: "https://www.linkedin.com/in/alana-kerr/",
+      label: "Say hello on LinkedIn",
+    },
+    {
+      name: "instagram",
+      url: "https://www.instagram.com/ani_kerr/",
+      label: "Check out my Instagram",
+    },
+  ]
   return (
     <>
       <div id="about">
         <Container>
-          <Row id="section">
+          <Row className="section">
             <Col sm={4}>
-              <img src={meBw} alt="That's me" />
+              <img src={meBw} alt="Me with a city street in the background" />
             </Col>
             <Col sm={8} id="about-text">
               <h1>Hello,</h1>
               <p>
-                I'm Alana Kerr, or Åni for short. I'm a fullstack developer with
-                a desire to use tech for good. I was born on the island of Guam
-                &nbsp;
+                I'm Alana Kerr, or Åni for short. I'm a frontend software
+                engineer with a desire to use tech for good. I was born on the
+                island of Guam &nbsp;
                 <span role="img" aria-label="palm_tree">
                   🌴
                 </span>
@@ -29,32 +49,24 @@ const About = props => {
                 leap into tech. Nothing gets me more excited than building,
                 creating, and learning new technologies.
               </p>
-              <IconContext.Provider value={{ className: "about-icon" }}>
-                <a href="mailto:ani.kerr@gmail.com">
-                  <FiMail />
-                </a>
-                <a href="https://github.com/anikerr"
-                   target="_blank">
-                  <FiGithub />
-                </a>
-                <a href="https://www.linkedin.com/in/alana-kerr/"
-                   target="_blank">
-                  <FiLinkedin />
-                </a>
-                <a href="https://www.instagram.com/ani_kerr/"
-                   target="_blank">
-                  <FiInstagram />
-                </a>
-              </IconContext.Provider>
+              {icons.map(icon => (
+                <Icon
+                  name={icon.name}
+                  url={icon.url}
+                  label={icon.label}
+                  iconClass="about-icon"
+                  key={icon.name}
+                />
+              ))}
             </Col>
           </Row>
         </Container>
       </div>
       <div id="skills">
         <Container>
-          <h3>Skills</h3>
-          JavaScript · React · Angular · React Native · Redux · Node.js · Express ·
-          Typescript · SCSS · Heroku · MongoDB · Git
+          <h2>Skills</h2>
+          JavaScript · React · Angular · React Native · Redux · Node.js ·
+          Express · Typescript · SCSS · Heroku · MongoDB · Git
         </Container>
       </div>
     </>

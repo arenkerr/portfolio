@@ -10,10 +10,9 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import { Container } from "react-bootstrap"
-import { FiGithub } from "react-icons/fi"
-import { IconContext } from "react-icons"
 
 import Navbar from "./navBar"
+import Icon from "./icon"
 
 const Layout = ({ children, pageInfo }) => {
   const data = useStaticQuery(graphql`
@@ -32,22 +31,18 @@ const Layout = ({ children, pageInfo }) => {
   return (
     <>
       <Navbar siteTitle={data.site.siteMetadata.title} pageInfo={pageInfo} />
-
       <main>{children}</main>
-
       <div id="footer">
         <Container>
           <footer>
-            © {new Date().getFullYear()}, Alana Kerr |{" "}
-            <a
-              href="https://github.com/anikerr/portfolio"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <IconContext.Provider value={{ className: "footer-icon" }}>
-                <FiGithub />
-              </IconContext.Provider>
-            </a>
+            © {new Date().getFullYear()}, Åni Kerr{" "}
+            <span aria-hidden="true">|</span>{" "}
+            <Icon
+              name="github"
+              url="https://github.com/anikerr/portfolio"
+              label="View this site's github repo"
+              iconClass="footer-icon"
+            />
           </footer>
         </Container>
       </div>

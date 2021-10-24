@@ -1,5 +1,5 @@
 #site-navbar {
-  background-color: #1d3461;
+  background-color: $color-primary;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -7,19 +7,41 @@
 }
 
 .navbar-brand a {
-  color: #50c9bb;
+  color: $color-accent-green;
   font-size: 1.2em;
   font-weight: 700;
-  border: 0.12em solid #ffdcc8;
+  border: 0.12em solid $color-light;
   padding: 0.2em 0.3em 0.2em 0.3em;
   border-radius: 0.2em;
 }
 
-.nav-link.active:after {
-  content: "";
-  float: left;
-  background: #f68c50;
-  width: 100%;
-  height: 4px;
-  border-radius: 3px;
+.navbar-dark .navbar-nav .nav-link {
+  &::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    border-radius: 3px;
+    background: $color-accent-orange;
+    transition: width 0.5s;
+  } 
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.navbar-dark .navbar-nav .nav-link.active:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    border-radius: 3px;
+    background: $color-accent-orange;
+    width: 100%;
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: $color-light;
 }

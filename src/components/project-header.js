@@ -5,7 +5,7 @@ const ProjectHeader = () => {
   return (
     <div id="section-header">
       <Container>
-        <h1>Projects</h1>
+        <h2>Projects</h2>
       </Container>
     </div>
   )
