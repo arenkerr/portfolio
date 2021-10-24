@@ -1,6 +1,6 @@
 # Portfolio
 
-Simple portfolio site built with Gatsby and Bootstrap. Complies with accessibility guidelines (WCAG 2.1.
+Simple portfolio site built with Gatsby and Bootstrap. Complies with accessibility guidelines (WCAG 2.1).
 
 ### Prerequisites
 
