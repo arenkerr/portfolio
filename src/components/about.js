@@ -8,22 +8,22 @@ const About = props => {
   const icons = [
     {
       name: "mail",
-      url: "mailto:ani.kerr@gmail.com",
-      label: "Email ani.kerr@gmail.com",
+      url: "mailto:aren.kerr@gmail.com",
+      label: "Email aren.kerr@gmail.com",
     },
     {
       name: "github",
-      url: "https://github.com/anikerr",
+      url: "https://github.com/arenkerr",
       label: "Visit my GitHub profile",
     },
     {
       name: "linkedIn",
-      url: "https://www.linkedin.com/in/alana-kerr/",
+      url: "https://www.linkedin.com/in/aren-kerr/",
       label: "Say hello on LinkedIn",
     },
     {
       name: "instagram",
-      url: "https://www.instagram.com/ani_kerr/",
+      url: "https://www.instagram.com/aren_kerr/",
       label: "Check out my Instagram",
     },
   ]
@@ -38,7 +38,7 @@ const About = props => {
             <Col sm={8} id="about-text">
               <h1>Hello,</h1>
               <p>
-                I'm Alana Kerr, or Åni for short. I'm a frontend software
+                I'm Aren Kerr (<i>air-ren</i>, they/them). I'm a software
                 engineer with a desire to use tech for good. I was born on the
                 island of Guam &nbsp;
                 <span role="img" aria-label="palm_tree">
@@ -66,7 +66,7 @@ const About = props => {
         <Container>
           <h2>Skills</h2>
           JavaScript · React · Angular · React Native · Redux · Node.js ·
-          Express · Typescript · SCSS · Heroku · MongoDB · Git
+          Express · Typescript · SCSS · Heroku · MongoDB · PostgreSQL · Git
         </Container>
       </div>
     </>

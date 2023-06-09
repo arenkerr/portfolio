@@ -35,11 +35,11 @@ const Layout = ({ children, pageInfo }) => {
       <div id="footer">
         <Container>
           <footer>
-            © {new Date().getFullYear()}, Åni Kerr{" "}
+            © {new Date().getFullYear()}, Aren Kerr{" "}
             <span aria-hidden="true">|</span>{" "}
             <Icon
               name="github"
-              url="https://github.com/anikerr/portfolio"
+              url="https://github.com/arenkerr/portfolio"
               label="View this site's github repo"
               iconClass="footer-icon"
             />

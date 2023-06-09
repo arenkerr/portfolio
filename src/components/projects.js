@@ -54,7 +54,7 @@ export default () => {
         <Project
           projectTitle="BirdSpot"
           projectImg={birdSpot}
-          github="https://github.com/anikerr/bird-spot"
+          github="https://github.com/arenkerr/bird-spot"
           stack={["React Native", "Cloud Firestore", "Google Maps API"]}
           about="BirdSpot is a bird watching ios application. It was a Fullstack Stackathon winner for best design and built in just 4 days. Users can share photos and details of bird sightings and see what birds species have been spotted in their area."
         />
@@ -72,7 +72,7 @@ export default () => {
         <Project
           projectTitle="Middle-Earth Trees"
           projectImg={meTrees}
-          github="https://github.com/anikerr/middle-earth-d3"
+          github="https://github.com/arenkerr/middle-earth-d3"
           stack={["React", "D3", "GraphQL"]}
           about="Genealogical data from Tolkien's Middle-Earth rendered into interactive visualizations using React and D3."
           demo="https://middle-earth-trees.netlify.app/"
