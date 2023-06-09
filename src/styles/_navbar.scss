@@ -6,6 +6,14 @@
   z-index: 100;
 }
 
+.navbar {
+  padding: 0.5rem 1rem;
+}
+
+.navbar-collapse {
+  justify-content: end;
+}
+
 .navbar-brand a {
   color: $color-accent-green;
   font-size: 1.2em;
@@ -17,14 +25,14 @@
 
 .navbar-dark .navbar-nav .nav-link {
   &::after {
-    content: '';
+    content: "";
     display: block;
     width: 0;
     height: 4px;
     border-radius: 3px;
     background: $color-accent-orange;
     transition: width 0.5s;
-  } 
+  }
 
   &:hover::after {
     width: 100%;
@@ -32,13 +40,13 @@
 }
 
 .navbar-dark .navbar-nav .nav-link.active:after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 4px;
-    border-radius: 3px;
-    background: $color-accent-orange;
-    width: 100%;
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  border-radius: 3px;
+  background: $color-accent-orange;
+  width: 100%;
 }
 
 .navbar-dark .navbar-nav .nav-link,
