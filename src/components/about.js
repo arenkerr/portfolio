@@ -38,7 +38,7 @@ const About = props => {
             <Col sm={8} id="about-text">
               <h1>Hello,</h1>
               <p>
-                I'm Aren Kerr (<i>air-ren</i>, they/them). I'm a software
+                I'm Aren (<i>air-ren</i>, they/them). I'm a software
                 engineer with a desire to use tech for good. I was born on the
                 island of Guam &nbsp;
                 <span role="img" aria-label="palm_tree">
@@ -65,8 +65,8 @@ const About = props => {
       <div id="skills">
         <Container>
           <h2>Skills</h2>
-          JavaScript · React · Angular · React Native · Redux · Node.js ·
-          Express · Typescript · SCSS · Heroku · MongoDB · PostgreSQL · Git
+          JavaScript · React · Angular · Node.js ·
+          Express · Typescript · SCSS · MongoDB · PostgreSQL · GraphQL · Git
         </Container>
       </div>
     </>

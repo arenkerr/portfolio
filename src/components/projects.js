@@ -11,7 +11,7 @@ const Project = props => {
     <Container className="project">
       <Row className="section">
         <Col sm={8}>
-          <img src={props.projectImg} alt={props.projectTitle} />
+          {props.projectImg && <img src={props.projectImg} alt={props.projectTitle} />}
         </Col>
         <Col sm={4}>
           <h2>{props.projectTitle}</h2>
@@ -61,11 +61,10 @@ export default () => {
       </div>
       <div>
         <Project
-          projectTitle="A Maze Thing"
-          projectImg={aMazeThing}
-          github="https://github.com/kirby-s-keystones/A-Maze-Thing"
-          stack={["React Native", "Viro"]}
-          about="In this cross-platform AR app, players navigate a maze to collect coins in a race against time. Players can also build their own maze to challenge friends and search for user-built mazes."
+          projectTitle="Tåno Tasi Yan Todu"
+          github="https://github.com/arenkerr/tano-tasi-todu"
+          stack={["Gatsby", "Strapi", "GraphQL"]}
+          about="Website for Tåno, Tåsi yan Todu (TTT) an indigenous-led environmental protection organization on Guåhan."
         />
       </div>
       <div>
