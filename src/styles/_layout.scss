@@ -7,6 +7,10 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 div.main {
   min-height: 100vh;
   padding-bottom: 60px;
@@ -34,21 +38,41 @@ div.full-height {
 
 #about {
   min-height: 100vh;
-  background-color: #245C5C;
+  background-color: #245c5c;
   align-items: center;
   display: flex;
   padding: 0 2.5em 2.5em 2.5em;
 }
 
-.about-text a {
-  color: $color-light;
-  text-decoration: none;
-  font-weight: 200;
+.about-text {
+  font-size: 1.3em;
+  color: #fff;
 }
 
-.about-text a:hover,
-.about-text a:focus {
-  text-decoration: underline;
+.about-text-link {
+  color: $color-light;
+  font-weight: 200;
+  display: inline-block;
+
+  &:hover {
+    color: $color-light;
+    text-decoration: none;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px;
+    border-radius: 3px;
+    background: $color-accent-orange;
+    transition: width 0.5s;
+  }
+
+  &:hover::after {
+    width: 100%;
+    text-decoration: none;
+  }
 }
 
 .about-icon {
@@ -74,11 +98,6 @@ div.full-height {
 
 .project-about {
   padding-top: 1em;
-}
-
-#about-text {
-  font-size: 1.3em;
-  color: #fff;
 }
 
 #skills {
@@ -111,29 +130,34 @@ a:hover {
   color: $color-primary;
   text-decoration: none;
 
-    > .icon-link-text::after  {
+  > .icon-link-text::after {
     width: 100%;
   }
 }
 
 .icon-link-text {
   color: $color-primary;
-
+  text-decoration: underline;
   padding-right: 0.15rem;
   display: inline-block;
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     width: 0;
     height: 4px;
     border-radius: 3px;
     background: $color-accent-orange;
     transition: width 0.5s;
-  } 
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
 
   &:hover::after {
     width: 100%;
+    text-decoration: none;
   }
 }
 
@@ -154,7 +178,7 @@ li {
 
 #footer {
   background-color: $color-primary;
-    text-align: center;
+  text-align: center;
   padding: 2.5em;
   color: $color-light;
 }

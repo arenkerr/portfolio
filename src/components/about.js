@@ -4,7 +4,7 @@ import { Row, Col, Container } from "react-bootstrap"
 import { meBw } from "../images"
 import Icon from "./icon"
 
-const About = props => {
+const About = (props) => {
   const icons = [
     {
       name: "mail",
@@ -35,21 +35,28 @@ const About = props => {
             <Col sm={4}>
               <img src={meBw} alt="Me with a city street in the background" />
             </Col>
-            <Col sm={8} id="about-text">
+            <Col sm={8} className="about-text">
               <h1>Hello,</h1>
               <p>
-                I'm Aren (<i>air-ren</i>, they/them). I'm a software
-                engineer with a desire to use tech for good. I was born on the
-                island of Guam &nbsp;
+                I'm Aren (<i>air-ren</i>, they/them). I'm a software engineer
+                with a desire to use tech for good. I was born on the island of{" "}
+                <a
+                  href="https://www.guampedia.com/guams-political-status/"
+                  target="_blank"
+                  className="about-text-link"
+                >
+                  Guåhan
+                </a>{" "}
+                &nbsp;
                 <span role="img" aria-label="palm_tree">
                   🌴
                 </span>
                 &nbsp; and have a background in design and illustration. After
                 working as a graphic designer in NYC for 5 years, I made the
                 leap into tech. Nothing gets me more excited than building,
-                creating, and learning new technologies.
+                creating, and learning new things.
               </p>
-              {icons.map(icon => (
+              {icons.map((icon) => (
                 <Icon
                   name={icon.name}
                   url={icon.url}
@@ -65,8 +72,8 @@ const About = props => {
       <div id="skills">
         <Container>
           <h2>Skills</h2>
-          JavaScript · React · Angular · Node.js ·
-          Express · Typescript · SCSS · MongoDB · PostgreSQL · GraphQL · Git
+          JavaScript · React · Angular · Node.js · Express · Typescript · SCSS ·
+          MongoDB · PostgreSQL · GraphQL · Git
         </Container>
       </div>
     </>
